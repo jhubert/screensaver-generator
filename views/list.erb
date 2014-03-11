@@ -1,0 +1,5 @@
+<ul>
+<% @packages.each do |package| %>
+  <li><a href="/savers/<%= package.id %>"><%= package.name %></a> (<%= JSON.parse(package.quotes).size %>)</li>
+<% end %>
+</ul>

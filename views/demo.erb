@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>Quotes ScreenSaver</title>
+  <meta name="author" content="Jeremy Baker" />
+
+  <link rel="stylesheet" type="text/css" href="/demo/styles.css" />
+
+  <script type="text/javascript" src="/demo/script.js"></script>
+  <script type="text/javascript">
+    YUI().use("node", function () {
+      QuotesApp.init({});
+      QuotesApp.start(<%= @package && @package.quotes %>);
+    });
+  </script>
+<body>
+  <div id="wrapper">
+    <blockquote class="quote">
+      <p class="content"></p>
+      <p class="author"><span class="fn"></span></p>
+      <p class="company"><span class="fn"></span></p>
+    </blockquote>
+  </div>
+</body>
+</html>

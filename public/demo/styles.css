@@ -1,0 +1,71 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: 2.6em/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: background-color 12s linear;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div#wrapper {
+    opacity: 0.8;
+    background: #fff;
+    height: 100%;
+    text-align: center;
+}
+
+#logo {
+    position: absolute;
+    visibility: hidden;
+}
+#logo-small {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.1;
+    -webkit-transition: opacity 1s linear;
+}
+#logo-small.hidden {
+    opacity: 0;
+}
+
+blockquote.quote {
+    background: url("quote.png") no-repeat 0 0;
+/*    display: none; */
+    opacity: 0;
+    font-weight: bold;
+    min-height: 200px;
+    padding: 0 0 0 250px;
+    width: 520px;
+    text-align: left;
+    position: absolute;
+}
+
+p.content {
+    color: #666;
+}
+
+p.author {
+    color: #999;
+    font-size: 0.6em;
+    margin-top: 1em;
+}
+
+p.company {
+    color: #0273C6;
+    font-size: 0.6em;
+    margin-top: 1em;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1><%= @package.name %> <small><a href="/savers/<%= @package.id %>/edit">(edit)</a></small></h1>
+    </div>
+    <div class="col-md-4">
+      <div class="alert alert-info">
+      <% if @package.paid? %>
+        <p>Paid! Download your screensaver now</p>
+      <% else %>
+        <form action="/charge" method="POST">
+          <input type="hidden" name="package_id" value="<%= @package.id %>">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_AbwhHTVYW2TLXKr8ay1C8zHx"
+            data-name="Custom Screen Saver"
+            data-email="<%= current_email %>"
+            data-description="<%= @package.name %> ($20.00)"
+            data-amount="2000"
+            data-label="Buy this screen saver for $20.00 USD">
+          </script>
+        </form>
+      <% end %>
+      </div>
+    </div>
+  </div>
+  <iframe src="/savers/<%= @package.id %>/demo" style="width: 100%; height: 800px;"></iframe>
+</div>

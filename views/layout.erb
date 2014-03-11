@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <title>ScreenSaver</title>
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <style type="text/css">
+    header { background-color: #428BCA; margin-bottom: 40px; }
+    header a:link, header a:visited { color: #fff; }
+    header a:hover, header a:active { color: #fff; }
+    header li.active a:link { color: #000; }
+  </style>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-146052-10']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <ul class="nav nav-pills">
+      <li class="active"><a href="/savers">Your Screen Savers</a></li>
+      <li><a href="/savers/new">Create A New Screen Saver</a></li>
+    </ul>
+  </div>
+</header>
+<div class="container">
+<%= yield %>
+</div>
+</body>
+</html>
